@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background-color: #f9f5f0; /* Light Beige background */
+    color: #333333; /* Charcoal Black text */
+}
+
+/* Header Styles */
+header {
+    background: #2c2c2c; /* Deep Grey */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif; /* Modern serif font */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b68b40; /* Warm Bronze */
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff; /* White background */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+h2 {
+    color: #2c2c2c; /* Deep Grey */
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+p, ul {
+    margin-bottom: 25px;
+}
+
+pre {
+    background: #f9f5f0; /* Light Beige background */
+    padding: 20px;
+    border-left: 6px solid #b68b40; /* Warm Bronze left border */
+    overflow-x: auto;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace; /* Monospaced font for code */
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #b68b40; /* Warm Bronze */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c6930; /* Darker Bronze */
+}
+
+#response, #checklist-response, #walkthrough-response, #technical-review-response,
+#ad-hoc-response, #scenario-response, #role-response, #perspective-response {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #b68b40; /* Warm Bronze */
+}
+
+/* Footer Styles */
+footer {
+    background: #2c2c2c; /* Deep Grey */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 15px 0;
+    list-style: none;
+}
+
+footer nav ul li {
+    margin: 0 20px;
+}
+
+footer nav ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #b68b40; /* Warm Bronze */
+    text-decoration: underline;
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    max-width: none; /* Remove max-width limitation */
+    background-color: #2c2c2c;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    white-space: nowrap; /* Ensure text stays on one line */
+    overflow: visible; /* Allow the tooltip to extend if needed */
+    opacity: 0;
+    transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #2c2c2c;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+}

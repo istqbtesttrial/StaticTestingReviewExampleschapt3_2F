@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspection</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Inspection</h1>
+    <nav>
+        <ul>
+            <li><a href="technical-review.html">Précédent : Revue Technique</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>L’inspection est le type de revue le plus formel. Elle suit un processus bien défini et est conçue pour identifier autant de défauts que possible. Les inspections incluent souvent la collecte de métriques, qui peuvent être utilisées pour améliorer le processus de développement. Les rôles dans une inspection incluent généralement l'auteur, le(s) réviseur(s), le modérateur et le scribe.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Dans cet exercice, vous participerez à une inspection simulée d’un extrait de code qui traite des commandes. Suivez les étapes structurées et adoptez différents rôles pour expérimenter le processus d’inspection.</p>
+        <pre><code>
+// Fonction pour traiter des commandes
+function processOrder(order) {
+    if (!order || !order.items || order.items.length === 0) {
+        return 'Commande invalide'; // Aucun article dans la commande
+    }
+
+    let total = 0;
+    for (let i = 0; i < order.items.length; i++) {
+        total += order.items[i].price * order.items[i].quantity;
+    }
+
+    return `Le total de la commande est ${total}`;
+}
+
+// Exemple d'utilisation
+const order = {
+    items: [
+        { name: 'Livre', price: 15, quantity: 2 },
+        { name: 'Stylo', price: 2, quantity: 5 }
+    ]
+};
+console.log(processOrder(order)); // Affiche : Le total de la commande est 40
+            </code></pre>
+        <h3>Rôles dans l’Inspection</h3>
+        <ul>
+            <li><strong>Auteur :</strong> Explique le code et répond aux questions.</li>
+            <li><strong>Réviseur :</strong> Identifie les défauts et propose des améliorations.</li>
+            <li><strong>Modérateur :</strong> Dirige l’inspection et veille à ce que le processus soit respecté.</li>
+            <li><strong>Scribe :</strong> Note les défauts et les décisions prises lors de l’inspection.</li>
+        </ul>
+        <form id="inspection-form">
+            <h3>Soumettez vos Observations</h3>
+            <label for="findings">Vos Observations :</label>
+            <textarea id="findings" name="findings" rows="4" cols="50"></textarea><br>
+            <button type="submit">Soumettre les Observations</button>
+        </form>
+        <div id="inspection-response"></div>
+        <button id="show-answer-btn-inspection" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-inspection" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p>La fonction traite correctement les commandes mais pourrait être améliorée en gérant les cas où les articles ont des quantités ou des prix négatifs. De plus, elle pourrait inclure une validation des entrées pour s’assurer que tous les détails de la commande sont corrects.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/review.js"></script>
+</body>
+</html>

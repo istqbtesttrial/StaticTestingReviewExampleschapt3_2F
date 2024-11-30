@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthrough</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Walkthrough</h1>
+    <nav>
+        <ul>
+            <li><a href="technical-review.html">Suivant : Revue Technique</a></li>
+            <li><a href="informal-review.html">Précédent : Revue Informelle</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>Un walkthrough est une présentation pas à pas par l'auteur d'un document pour recueillir des informations et favoriser la compréhension parmi les participants. Il peut être formel ou informel et est généralement utilisé pour évaluer la qualité du produit de travail.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Imaginez que vous participez à un walkthrough d'une fonction qui calcule le prix total des articles dans un panier. L'auteur vous guidera à travers le code pour discuter de sa logique et identifier d'éventuels problèmes.</p>
+        <pre>
+            <code>
+<span class="tooltip">function calculateTotalPrice(items) {<span class="tooltiptext">Ceci est la déclaration de la fonction. Elle prend un tableau d'articles comme argument.</span></span>
+<span class="tooltip">    let total = 0;<span class="tooltiptext">Initialise une variable pour suivre le prix total.</span></span>
+<span class="tooltip">    for (let i = 0; i < items.length; i++) {<span class="tooltiptext">Commence une boucle pour parcourir chaque article dans le panier.</span></span>
+<span class="tooltip">        total += items[i].price * items[i].quantity;<span class="tooltiptext">Pour chaque article, multiplie le prix par la quantité et ajoute le résultat au total.</span></span>
+<span class="tooltip">    }<span class="tooltiptext">Fin de la boucle.</span></span>
+<span class="tooltip">    return total;<span class="tooltiptext">Retourne le prix total calculé.</span></span>
+<span class="tooltip">}<span class="tooltiptext">Fin de la fonction.</span></span>
+
+<span class="tooltip">// Exemple d'utilisation<span class="tooltiptext">Ceci est un exemple d'utilisation de la fonction.</span></span>
+<span class="tooltip">const cartItems = [<span class="tooltiptext">Définit un tableau d'articles dans le panier.</span></span>
+<span class="tooltip">    { name: 'Chemise', price: 20, quantity: 2 },<span class="tooltiptext">Le premier article est une chemise qui coûte 20€ avec une quantité de 2.</span></span>
+<span class="tooltip">    { name: 'Pantalon', price: 40, quantity: 1 }<span class="tooltiptext">Le deuxième article est un pantalon qui coûte 40€ avec une quantité de 1.</span></span>
+<span class="tooltip">];<span class="tooltiptext">Fin de la définition du tableau.</span></span>
+<span class="tooltip">console.log(calculateTotalPrice(cartItems)); // Affiche : 80<span class="tooltiptext">Appelle la fonction et affiche le prix total dans la console.</span></span>
+            </code>
+        </pre>
+        <form id="walkthrough-form">
+            <label for="comments">Vos Commentaires :</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            <button type="submit">Soumettre les Commentaires</button>
+        </form>
+        <div id="walkthrough-response"></div>
+        <button id="show-answer-btn-walkthrough" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-walkthrough" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p>Le code calcule correctement le prix total, mais ne gère pas les cas où le prix ou la quantité est négatif ou non numérique. Il pourrait également être amélioré en vérifiant la validité des types d'entrée.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/review.js"></script>
+</body>
+</html>

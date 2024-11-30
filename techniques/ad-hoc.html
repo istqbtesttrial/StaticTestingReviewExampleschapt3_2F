@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revue Ad Hoc</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Revue Ad Hoc</h1>
+    <nav>
+        <ul>
+            <li><a href="checklist-based.html">Suivant : Revue Basée sur une Checklist</a></li>
+            <li><a href="review-techniques.html">Retour aux Techniques de Revue</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>Une revue ad hoc est un processus de revue informel où le réviseur examine le produit sans suivre une procédure structurée. L'efficacité d'une revue ad hoc dépend en grande partie de l'expérience et des connaissances du réviseur sur le produit examiné.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Examinez le code suivant, qui calcule une réduction sur le prix d'un produit. Effectuez une revue ad hoc pour identifier d'éventuels problèmes dans le code.</p>
+        <pre>
+            <code>
+// Exemple de code à réviser
+function calculateDiscount(price, discount) {
+    return price - (price * discount);
+}
+
+const discountedPrice = calculateDiscount(100, 0.15);
+console.log(discountedPrice); // Affiche : 85
+            </code>
+        </pre>
+        <form id="ad-hoc-review-form">
+            <label for="ad-hoc-feedback">Vos Commentaires :</label>
+            <textarea id="ad-hoc-feedback" name="ad-hoc-feedback" rows="4" cols="50"></textarea>
+            <button type="submit">Soumettre la Revue</button>
+        </form>
+        <div id="ad-hoc-response"></div>
+        <button id="show-answer-btn-ad-hoc" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-ad-hoc" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p>Le code ne prend pas en compte les entrées invalides, comme un prix ou une réduction négatifs. De plus, aucune validation n'est effectuée pour vérifier si la réduction se situe dans une plage raisonnable (par exemple, entre 0 et 1).</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/techniques.js"></script>
+</body>
+</html>

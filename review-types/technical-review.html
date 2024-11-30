@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revue Technique</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Revue Technique</h1>
+    <nav>
+        <ul>
+            <li><a href="inspection.html">Suivant : Inspection</a></li>
+            <li><a href="walkthrough.html">Précédent : Walkthrough</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>Une revue technique est un processus formel mené par une équipe de personnel techniquement qualifié pour évaluer la qualité et la cohérence d’un produit de travail. La revue est structurée et utilise souvent une checklist pour s'assurer que tous les aspects critiques sont couverts.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Effectuons une revue technique sur un extrait de code qui gère la validation des entrées utilisateur. Utilisez la checklist fournie pour évaluer le code.</p>
+        <pre><code>
+// Fonction pour valider les entrées utilisateur
+function validateInput(input) {
+    if (typeof input !== 'string') {
+        return false; // Type d'entrée invalide
+    }
+    if (input.trim() === '') {
+        return false; // Entrée vide
+    }
+    return true; // Entrée valide
+}
+            </code></pre>
+        <form id="technical-review-form">
+            <h3>Checklist de Revue Technique</h3>
+            <label>
+                <input type="checkbox" name="checklist" value="input-type"> Valide le type d'entrée
+            </label><br>
+            <label>
+                <input type="checkbox" name="checklist" value="input-empty"> Vérifie si l'entrée est vide
+            </label><br>
+            <label>
+                <input type="checkbox" name="checklist" value="input-valid"> Retourne "true" pour une entrée valide
+            </label><br>
+            <label>
+                <input type="checkbox" name="checklist" value="edge-cases"> Gère efficacement les cas limites
+            </label><br>
+            <button type="submit">Soumettre la Checklist</button>
+        </form>
+        <div id="technical-review-response"></div>
+        <button id="show-answer-btn-technical" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-technical" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p>La fonction gère correctement le type d'entrée et les chaînes vides, mais pourrait être améliorée en gérant des cas limites comme des chaînes très longues ou des entrées non textuelles.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/review.js"></script>
+</body>
+</html>

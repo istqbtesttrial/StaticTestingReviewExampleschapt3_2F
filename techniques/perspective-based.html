@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revue Basée sur les Perspectives</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Revue Basée sur les Perspectives</h1>
+    <nav>
+        <ul>
+            <li><a href="role-based.html">Retour à la Revue Basée sur les Rôles</a></li>
+            <li><a href="review-techniques.html">Retour aux Techniques de Revue</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>Une revue basée sur les perspectives consiste à examiner le produit de travail sous différents angles, tels que la convivialité, les performances ou la sécurité. Cela garantit que le produit est complet et répond à toutes les exigences nécessaires.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Examinez le code suivant sous l'angle des performances, de la convivialité ou de la sécurité. Identifiez d'éventuels problèmes.</p>
+        <pre>
+            <code>
+// Exemple de code à réviser
+function processData(data) {
+    let result = [];
+    for (let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data[i].items.length; j++) {
+            result.push(data[i].items[j]);
+        }
+    }
+    return result;
+}
+
+const data = [
+    { items: [1, 2, 3] },
+    { items: [4, 5, 6] },
+    { items: [7, 8, 9] }
+];
+console.log(processData(data)); // Affiche : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            </code>
+        </pre>
+        <form id="perspective-review-form">
+            <label for="perspective">Choisissez votre perspective :</label>
+            <select id="perspective" name="perspective">
+                <option value="Performance">Performances</option>
+                <option value="Usability">Convivialité</option>
+                <option value="Security">Sécurité</option>
+            </select>
+            <label for="perspective-feedback">Votre Revue :</label>
+            <textarea id="perspective-feedback" name="perspective-feedback" rows="4" cols="50"></textarea>
+            <button type="submit">Soumettre la Revue</button>
+        </form>
+        <div id="perspective-response"></div>
+        <button id="show-answer-btn-perspective" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-perspective" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p id="perspective-specific-answer"></p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/techniques.js"></script>
+</body>
+</html>

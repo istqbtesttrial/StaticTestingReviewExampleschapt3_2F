@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revue Basée sur les Rôles</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Revue Basée sur les Rôles</h1>
+    <nav>
+        <ul>
+            <li><a href="perspective-based.html">Suivant : Revue Basée sur les Perspectives</a></li>
+            <li><a href="scenario-based.html">Retour à la Revue Basée sur des Scénarios</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>Une revue basée sur les rôles consiste à examiner le produit de travail du point de vue de différents intervenants, tels que les utilisateurs finaux, les développeurs ou les testeurs. Cela permet de s'assurer que le produit répond aux besoins de toutes les parties concernées.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Examinez le code suivant du point de vue d'un analyste en sécurité, d'un développeur ou d'un testeur. Identifiez d'éventuels problèmes.</p>
+        <pre>
+            <code>
+// Exemple de code à réviser
+function processPayment(cardNumber, amount) {
+    console.log(`Traitement du paiement de ${amount} pour le numéro de carte ${cardNumber}`);
+    // Logique de traitement du paiement ici
+}
+
+processPayment('1234-5678-9012-3456', 100);
+            </code>
+        </pre>
+        <form id="role-review-form">
+            <label for="role">Sélectionnez votre rôle :</label>
+            <select id="role" name="role">
+                <option value="Security Analyst">Analyste en Sécurité</option>
+                <option value="Developer">Développeur</option>
+                <option value="Tester">Testeur</option>
+            </select>
+            <label for="role-feedback">Votre Revue :</label>
+            <textarea id="role-feedback" name="role-feedback" rows="4" cols="50"></textarea>
+            <button type="submit">Soumettre la Revue</button>
+        </form>
+        <div id="role-response"></div>
+        <button id="show-answer-btn-role" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-role" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p id="role-specific-answer"></p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/techniques.js"></script>
+</body>
+</html>

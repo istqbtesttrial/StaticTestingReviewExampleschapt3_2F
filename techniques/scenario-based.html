@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revue Basée sur des Scénarios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Revue Basée sur des Scénarios</h1>
+    <nav>
+        <ul>
+            <li><a href="role-based.html">Suivant : Revue Basée sur les Rôles</a></li>
+            <li><a href="checklist-based.html">Retour à la Revue Basée sur une Checklist</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>Une revue basée sur des scénarios consiste à examiner le produit de travail en considérant différents scénarios dans lesquels le produit pourrait être utilisé. Cette technique permet de s'assurer que le produit répond aux besoins des utilisateurs dans une variété de situations.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Considérez le scénario suivant : Un client essaie d'acheter un produit en utilisant un code de réduction. Examinez le code suivant pour vous assurer qu'il gère correctement ce scénario.</p>
+        <pre>
+            <code>
+// Exemple de code à réviser
+function applyDiscount(price, discountCode) {
+    const discount = discountCode === 'SAVE10' ? 0.1 : 0;
+    return price - (price * discount);
+}
+
+const finalPrice = applyDiscount(100, 'SAVE10');
+console.log(finalPrice); // Affiche : 90
+            </code>
+        </pre>
+        <form id="scenario-review-form">
+            <label for="scenario-feedback">Votre Revue :</label>
+            <textarea id="scenario-feedback" name="scenario-feedback" rows="4" cols="50"></textarea>
+            <button type="submit">Soumettre la Revue</button>
+        </form>
+        <div id="scenario-response"></div>
+        <button id="show-answer-btn-scenario" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-scenario" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p>Le code devrait valider que le code de réduction est valide avant d'appliquer la réduction. De plus, il devrait gérer les cas où le code de réduction est incorrect ou non fourni.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/techniques.js"></script>
+</body>
+</html>

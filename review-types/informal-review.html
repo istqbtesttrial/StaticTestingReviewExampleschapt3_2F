@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revue Informelle</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Revue Informelle</h1>
+    <nav>
+        <ul>
+            <li><a href="walkthrough.html">Suivant : Walkthrough</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>Une revue informelle est un processus simple et flexible qui est souvent utilisé dans les projets agiles. Contrairement aux revues formelles, elle ne suit pas un processus défini et ne nécessite pas de documentation formelle.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Voici un extrait de code simple pour une fonction de connexion. Examinez le code et fournissez un retour sur les éventuels problèmes que vous identifiez.</p>
+        <pre><code>
+// Fonction de connexion simple
+function validateLogin(username, password) {
+    if (username == '' || password == '') {
+        return false; // Entrée manquante
+    }
+    return true; // Entrée valide
+}
+            </code></pre>
+        <form id="review-form">
+            <label for="feedback">Votre Revue :</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+            <button type="submit">Soumettre la Revue</button>
+        </form>
+        <div id="response"></div>
+        <button id="show-answer-btn-review" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-review" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p>Le code ne gère pas certains cas limites, tels que des valeurs nulles ou des entrées non textuelles. De plus, il serait préférable de supprimer les espaces accidentels dans le nom d'utilisateur et le mot de passe.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/review.js"></script>
+</body>
+</html>

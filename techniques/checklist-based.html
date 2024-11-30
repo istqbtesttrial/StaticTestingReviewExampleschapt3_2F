@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revue Basée sur une Checklist</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Revue Basée sur une Checklist</h1>
+    <nav>
+        <ul>
+            <li><a href="scenario-based.html">Suivant : Revue Basée sur des Scénarios</a></li>
+            <li><a href="ad-hoc.html">Retour à la Revue Ad Hoc</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Définition</h2>
+        <p>Une revue basée sur une checklist est un processus de revue formel où le réviseur utilise une checklist d’éléments pour guider la revue. La checklist inclut généralement des problèmes communs et des points spécifiques à examiner dans le produit de travail.</p>
+    </section>
+    <section>
+        <h2>Exemple Pratique</h2>
+        <p>Considérez les éléments de checklist suivants. Sélectionnez ceux qui, selon vous, s’appliquent au code donné :</p>
+        <pre>
+            <code>
+// Exemple de code à réviser
+function processOrder(order) {
+    if (!order || !order.items || order.items.length === 0) {
+        return 'Commande invalide';
+    }
+
+    let total = 0;
+    for (let i = 0; i < order.items.length; i++) {
+        total += order.items[i].price * order.items[i].quantity;
+    }
+
+    return `Le total de la commande est ${total}`;
+}
+            </code>
+        </pre>
+        <form id="checklist-review-form">
+            <label for="checklist">Sélectionnez les éléments de checklist applicables :</label>
+            <ul>
+                <li><input type="checkbox" name="checklist" value="1"> Validation des entrées</li>
+                <li><input type="checkbox" name="checklist" value="2"> Gestion des valeurs négatives</li>
+                <li><input type="checkbox" name="checklist" value="3"> Calcul correct des totaux</li>
+            </ul>
+            <button type="submit">Soumettre la Revue</button>
+        </form>
+        <div id="checklist-response"></div>
+        <button id="show-answer-btn-checklist" style="display: none;">Afficher la Réponse Correcte</button>
+        <div id="correct-answer-checklist" class="correct-answer" style="display: none;">
+            <h3>Réponse Correcte :</h3>
+            <p>Le code devrait inclure une validation des entrées, notamment pour vérifier que les prix et les quantités sont des nombres positifs. Il ne gère actuellement pas correctement les valeurs négatives.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Ouajdi Belhaj 2024</p>
+</footer>
+<script src="../js/techniques.js"></script>
+</body>
+</html>
